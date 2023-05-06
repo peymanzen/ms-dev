@@ -1,0 +1,11 @@
+2023-04-29T11:22:09.592Z [[31merror[39m] : MongoDB connection error. Please make sure MongoDB is running. MongooseServerSelectionError: getaddrinfo ENOTFOUND mongo 
+2023-04-29T11:22:42.641Z [[31merror[39m] : MongoDB connection error. Please make sure MongoDB is running. MongooseServerSelectionError: getaddrinfo ENOTFOUND mongo 
+2023-04-29T11:23:15.717Z [[31merror[39m] : MongoDB connection error. Please make sure MongoDB is running. MongooseServerSelectionError: getaddrinfo ENOTFOUND mongo 
+2023-04-29T11:23:48.812Z [[31merror[39m] : MongoDB connection error. Please make sure MongoDB is running. MongooseServerSelectionError: getaddrinfo ENOTFOUND mongo 
+2023-04-29T11:24:38.938Z [[31merror[39m] : MongoDB connection error. Please make sure MongoDB is running. MongooseServerSelectionError: getaddrinfo ENOTFOUND mongo 
+2023-05-03T11:31:17.437Z [[31merror[39m] : MongoDB connection error. Please make sure MongoDB is running. MongooseServerSelectionError: connect ETIMEDOUT 10.244.0.23:27017 
+2023-05-03T11:31:50.472Z [[31merror[39m] : MongoDB connection error. Please make sure MongoDB is running. MongooseServerSelectionError: connect ETIMEDOUT 10.244.0.23:27017 
+2023-05-03T11:32:23.503Z [[31merror[39m] : MongoDB connection error. Please make sure MongoDB is running. MongooseServerSelectionError: connect ETIMEDOUT 10.244.0.23:27017 
+2023-05-03T11:33:34.940Z [[31merror[39m] : MongoDB connection error. Please make sure MongoDB is running. MongooseServerSelectionError: connect ETIMEDOUT 10.244.0.23:27017 
+2023-05-03T11:34:07.990Z [[31merror[39m] : MongoDB connection error. Please make sure MongoDB is running. MongooseServerSelectionError: connect ETIMEDOUT 10.244.0.23:27017 
+2023-05-03T11:34:41.068Z [[31merror[39m] : MongoDB connection error. Please make sure MongoDB is running. MongooseServerSelectionError: connect ETIMEDOUT 10.244.0.23:27017 

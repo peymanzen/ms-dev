@@ -1,0 +1,30 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: product-service-mongodb
+  labels:
+    app: productApi1
+    tier: db
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: productApi1
+      tier: db
+  template:
+    metadata:
+      labels:
+        app: productApi1
+        tier: db
+    spec:
+      containers:
+        - name: mongo
+          image: mongo:4
+          ports:
+            - containerPort: 27017
+          volumeMounts:
+            - name: mongo-data
+              mountPath: /data/db
+      volumes:
+      - name: mongo-data
+        emptyDir: {}

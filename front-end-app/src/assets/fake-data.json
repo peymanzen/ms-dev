@@ -1,0 +1,24 @@
+[{
+    "id": "1234",
+    "name": "Beautyfull armchair",
+    "barcode": 2334234,
+    "model": "beaed",
+    "designer": "payman",
+    "inStock": 5,
+    "desc": "this is the best",
+    "material": "wood",
+    "price":"12000",
+    "img": "../assets/fur1.jpg"
+  },
+  {
+    "id": "12345",
+    "name": "Beautyfull armchair silver",
+    "barcode": 23342345,
+    "model": "beaed",
+    "designer": "payman",
+    "inStock": 5,
+    "desc": "this is the best",
+    "material": "wood",
+    "price":"15000",
+    "img": "../assets/fur2.jpg"
+  }]

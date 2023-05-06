@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: comment-service
+  labels:
+    app: commentApi
+    tier: backend
+spec:
+  selector:
+    app: commentApi
+    tier: backend
+  type: ClusterIP
+  ports:
+    - port: 5001
+      targetPort : 3000
+      nodePort: 31111

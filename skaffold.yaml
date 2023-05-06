@@ -1,0 +1,30 @@
+apiVersion: skaffold/v2beta4
+kind: Config
+build:
+  tagPolicy:
+    sha256: {}
+  artifacts:
+    - image: product-service
+      context: product-service
+      sync:
+        infer:
+          - '**/*'
+    - image: filter-service
+      context: filter-service
+      sync:
+        infer:
+          - '**/*'
+    - image: comment-service
+      context: comment-service
+      sync:
+        infer:
+          - '**/*'
+    - image: front-end-app
+      context: front-end-app
+      sync:
+        infer:
+          - '**/*'
+deploy:
+  kubectl:
+    manifests:
+      - ./kube/*

@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: front-end-app
+  labels:
+    app: frontend-app
+    tier: frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontend-app
+      tier: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend-app
+        tier: frontend
+    spec:
+      containers:
+      - name: frontend
+        image: front-end-app
+        imagePullPolicy: IfNotPresent
+        resources:
+          limits:
+            memory: "64Mi"
+            cpu: "100m"
+        # ports:
+        # - name: http
+        #   containerPort: 8080
+        # env:
+        # - name: PRODUCT_API_ADDR
+        #   value: product-service:5000
+        # - name: COMMENT_API_ADDR
+        #   value: comment-service:3000
+        # - name: FILTER_API_ADDR
+        #   value: filter-service:3001

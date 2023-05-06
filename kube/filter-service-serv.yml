@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: filter-service
+  labels:
+    app: filterApi
+    tier: backend
+spec:
+  selector:
+    app: filterApi
+    tier: backend
+  type: ClusterIP
+  ports:
+    - port: 5002
+      targetPort : 3001
+      nodePort: 31112

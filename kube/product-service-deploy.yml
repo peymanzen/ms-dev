@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: product-service
+  labels:
+    app: productApi
+    tier: backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: productApi
+      tier: backend
+  template:
+    metadata:
+      labels:
+        app: productApi
+        tier: backend
+    spec:
+      containers:
+      - name: productservice
+        image: product-service
+        imagePullPolicy: IfNotPresent
+        resources:
+          limits:
+            memory: "64Mi"
+            cpu: "100m"
+        ports:
+        - containerPort: 3002
+        env:
+          - name: DB_ADDR
+            value: "product-service-mongodb:27017"
+        

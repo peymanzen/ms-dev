@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: comment-service
+  labels:
+    app: commentApi
+    tier: backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: commentApi
+      tier: backend
+  template:
+    metadata:
+      labels:
+        app: commentApi
+        tier: backend
+    spec:
+      containers:
+      - name: commentservice
+        image: comment-service
+        imagePullPolicy: IfNotPresent
+        resources:
+          limits:
+            memory: "64Mi"
+            cpu: "100m"
+        ports:
+        - containerPort: 3000
+        env:
+          - name: DB_ADDR
+            value: "product-service-mongodb:27017"
